@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scientific Calcolater</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		function changeSign(input){
+			if(calculator.display.value.substring(0,1)=="-")
+				calculator.display.value=calculator.display.value.substring(1,calculator.display.value.length)
+
+			else
+			calculator.display.value="-"+calculator.display.value
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div class="screen"><form name="calculator"><input type="text" name="display" id="scn" size="20" readonly maxlength="50"></form></div>
+		<div class="btns">
+			<p>
+				<input type="button" value="SIN" class="button black" onclick="calculator.display.value=Math.sin(calculator.display.value)">
+				<input type="button" value="COS" class="button black" onclick="calculator.display.value=Math.cos(calculator.display.value)">
+				<input type="button" value="TAN" class="button black" onclick="calculator.display.value=Math.tan(calculator.display.value)">
+				<input type="button" value="(-)" class="button black" onclick="changeSign(calculator.display.value)">
+				<input type="button" value="ABS" class="button black" onclick="calculator.display.value=Math.abs(calculator.display.value)">
+			</p>
+			<p>
+				<input type="button" value="&radic;" class="button black" onclick="calculator.display.value=Math.sqrt(calculator.display.value)">
+				<input type="button" value="SQR" class="button black" onclick="calculator.display.value=Math.pow(calculator.display.value,2)">
+				<input type="button" value="^" class="button black" onclick="calculator.display.value=Math.pow(calculator.display.value,calculator.display.value)">
+				<input type="button" value="LOG" class="button black" onclick="calculator.display.value=Math.log(calculator.display.value)">
+				<input type="button" value="In" class="button black" onclick="calculator.display.value=Math.E">
+			</p>
+			<p>
+				<input type="button" value="CLR" class="button black" onclick="calculator.display.value=''">
+				<input type="button" value="(" class="button black" onclick="calculator.display.value+='('">
+				<input type="button" value=")" class="button black" onclick="calculator.display.value+=')'">
+				<input type="button" value="M+" class="button black" onclick="calculator.display.value+='M+'">
+				<input type="button" value="MOD" class="button black" onclick="calculator.display.value+='%'">
+			</p>
+			<p>
+				<input type="button" value="7" class="button silver" onclick="calculator.display.value+='7'">
+				<input type="button" value="8" class="button silver" onclick="calculator.display.value+='8'">
+				<input type="button" value="9" class="button silver" onclick="calculator.display.value+='9'">
+				<input type="button" value="DEL" class="button red" onclick="calculator.display.value =calculator.display.value=calculator.display.value.substring(0,calculator.display.value.length-1)">
+				<input type="button" value="EXIT" class="button red">
+			</p>
+			<p>
+				<input type="button" value="4" class="button silver" onclick="calculator.display.value+='4'">
+				<input type="button" value="5" class="button silver" onclick="calculator.display.value+='5'">
+				<input type="button" value="6" class="button silver" onclick="calculator.display.value+='6'">
+				<input type="button" value="x" class="button silver" onclick="calculator.display.value+='*'">
+				<input type="button" value="/" class="button silver" onclick="calculator.display.value+='/'">
+			</p>
+			<p>
+				<input type="button" value="1" class="button silver" onclick="calculator.display.value+='1'">
+				<input type="button" value="2" class="button silver" onclick="calculator.display.value+='2'">
+				<input type="button" value="3" class="button silver" onclick="calculator.display.value+='3'">
+				<input type="button" value="+" class="button silver" onclick="calculator.display.value+='+'">
+				<input type="button" value="-" class="button silver" onclick="calculator.display.value+='-'">
+			</p>
+			<p>
+				<input type="button" value="0" class="button silver" onclick="calculator.display.value+='0'">
+				<input type="button" value="." class="button silver" onclick="calculator.display.value+='.'">
+				<input type="button" value="EXP" class="button silver" onclick="calculator.display.value+=Math.exp(calculator.display.value)">
+				<input type="button" value="Pi" class="button silver" onclick="calculator.display.value+=Math.PI">
+				<input type="button" value="=" class="button silver" onclick="calculator.display.value=eval(calculator.display.value)">
+			</p>
+
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>
